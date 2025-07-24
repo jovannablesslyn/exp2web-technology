@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Event Registration</title>
+</head>
+<body>
+
+  <h2>Student Event Registration</h2>
+
+  <form action="/submit_event_registration" method="post">
+
+    <!-- Full Name -->
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- Roll Number -->
+    <label for="roll">Roll Number:</label><br>
+    <input type="text" id="roll" name="roll" required><br><br>
+
+    <!-- Department -->
+    <label for="dept">Department:</label><br>
+    <select id="dept" name="dept" required>
+      <option disabled selected>-- Select Department --</option>
+      <option value="CSE">Computer Science</option>
+      <option value="ECE">Electronics</option>
+      <option value="EEE">Electrical</option>
+      <option value="MECH">Mechanical</option>
+      <option value="CIVIL">Civil</option>
+    </select><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Phone -->
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+    <!-- Event -->
+    <label for="event">Select Event:</label><br>
+    <select id="event" name="event" required>
+      <option disabled selected>-- Choose an Event --</option>
+      <option value="Coding">Coding Challenge</option>
+      <option value="Quiz">Tech Quiz</option>
+      <option value="Hackathon">Hackathon</option>
+      <option value="Workshop">AI Workshop</option>
+      <option value="Gaming">E-Gaming</option>
+    </select><br><br>
+
+    <!-- Year -->
+    <label for="year">Year of Study:</label><br>
+    <select id="year" name="year" required>
+      <option disabled selected>-- Select Year --</option>
+      <option value="1">First Year</option>
+      <option value="2">Second Year</option>
+      <option value="3">Third Year</option>
+      <option value="4">Fourth Year</option>
+    </select><br><br>
+
+    <!-- Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label><br><br>
+
+    <!-- Mode -->
+    <label>Mode of Participation:</label><br>
+    <input type="radio" id="online" name="mode" value="Online" required>
+    <label for="online">Online</label><br>
+    <input type="radio" id="offline" name="mode" value="Offline">
+    <label for="offline">Offline</label><br><br>
+
+    <!-- File Upload -->
+    <label for="idcard">Upload College ID (optional):</label><br>
+    <input type="file" id="idcard" name="idcard"><br><br>
+
+    <!-- Comments -->
+    <label for="comments">Comments / Team Details:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+    <!-- Terms -->
+    <input type="checkbox" id="agree" name="agree" required>
+    <label for="agree">I agree to the terms and conditions</label><br><br>
+
+    <!-- Submit Buttons -->
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+
+  </form>
+
+</body>
+</html>
